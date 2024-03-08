@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="/styles/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/styles/global.css">
+  <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+  <title>Common Website Features</title>
+</head>
+<body>
+  
+  <section class="hero-container">
+    <div class="hero-image" title="Cloudy grey and white mountain valley ">
+      <div class="hero-text">
+        <h1>PLAN THE TRIP TO MOUNTAINS</h1>
+        <h4>Explore majestic mountains in Canada.</h4>
+      </div>
+    </div>
+  </section>
+  
+  <section class="container content-container">
+    <div class="text">
+      <h1>Book your trip to Banff</h1>
+      <p id="Discoverbanff">Discover the beauty of Banff, where the majesty of nature is revealed at every turn. Located in the heart of the Canadian Rockies, Banff offers a breathtaking combination of mountain landscapes, alpine lakes, and lush forests. Stroll along scenic trails, breathe in the fresh mountain air, or admire the beautiful waters of the lakes.</p>
+    </div>
+    <div class="media">
+      <img width="560" height="315" src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=2911&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Panoramic view of the majestic mountain range and clear lake with small stones at the bottom against the blue sky.">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TJohEDj0KPk?si=XD3ZtazUhA-8kJ3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="css-button">
+        <span class="css-button-icon">
+          <i class="fa fa-bars"></i>
+        </span>
+        <span class="css-button-text">
+          <span>Explore</span>
+        </span>
+      </button>
+    </div>
+  </section>
+  
+  <section class="container accordion-container">
+    <h2>Packages</h2>
+
+    <button class="accordion">Economy</button>
+    <div class="panel">
+      <p>$500</p>
+      <p>The Economy package includes hotel stay for 3 nights, roundtrip transportation, and all park passes.</p>
+    </div>
+
+    <button class="accordion">Family</button>
+    <div class="panel">
+      <p>$1000</p>
+      <p>The Family package includes hotel stay for 3 nights, 2 breakfasts, roundtrip transportation, and all park passes.</p>
+    </div>
+
+    <button class="accordion">Premium</button>
+    <div class="panel">
+      <p>$1300</p>
+      <p>The Family package includes hotel stay for 3 nights, 2 breakfasts and 3 dinners, roundtrip transportation, and all park passes.</p>
+    </div>
+  </section>
+  
+  <section class="footer-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321203.7051655122!2d-114.41746354582696!3d51.027159655274026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170039f843fd5%3A0x266d3bb1b652b63a!2sCalgary%2C%20AB!5e0!3m2!1sen!2sca!4v1709871097419!5m2!1sen!2sca" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Accessibility</a></li>
+    </ul>
+    <div class="footer-date">
+      <p>© <span id="date"></span>, ELENA NAPOLSKIKH</p>
+    </div>
+  </section>
+
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    const d = new Date().getFullYear();
+    document.getElementById("date").innerHTML = d;
+  </script>
+</body>
+</html>
