@@ -1,3 +1,7 @@
+body {
+  background-color: #cfe8fe;
+}
+
 .hero-text {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
@@ -16,18 +20,43 @@
 .content-container {
   height: 75vh;
   position: relative;
+  font-family: "Oldenburg", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .accordion-container {
-  background-color: #d8e9ff;
+  background-color: white;
+  font-family: "Oldenburg", serif;
+} 
+
+.accordion {
+  background-color: #ffffff;
   color: #000000;
-  height: 65vh;
-  position: relative;
-  text-align: center;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  font-size: large;
+  font-family: "Oldenburg", serif;
+}
+
+.active, .accordion:hover {
+  background-color: #7d5ee3;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #ffffff;
+  display: none;
+  overflow: hidden;
 }
 
 .footer-container {
-  background-color: #c4d5ec;
+  background-color: #cfe8fe;
   width: 100%;
   height: 250px;
   position: relative;
@@ -59,7 +88,7 @@
   padding-left: 300px;
   padding-right: 300px;
   padding-bottom: 50px;
-  font-family: "Madimi One", sans-serif;
+  font-family: "Oldenburg", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -69,14 +98,12 @@
 	font-size: 20px;
 	border-radius: 5px;
 	border: solid 1px #3866a3;
-	text-shadow: 1px 1px 0px #528ECC;
-	box-shadow: inset 1px 1px 0px 0px #BBDAF7;
 	text-decoration: none;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	font-family: Arial;
-	background: linear-gradient(180deg, #bae4ff 10%, #1572ce 100%);
+	font-family: "Roboto", sans-serif;
+	background: linear-gradient(180deg, #64b9ff 10%, #045698 100%);
 	display: inline-flex;
 	align-items: center;
 	padding: 0;
@@ -100,38 +127,167 @@
   margin-top: 50px;
 }
 
-.accordion {
-  background-color: #c6d7ec;
-  color: #000000;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+
 
 .active, .accordion:hover {
   background-color: #ccc; 
 }
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-bars {
+  padding: 0;
 }
 
 .footer-date {
   text-align: center;
-  background-color: #c6d7ec;
+  background-color: #cfe8fe;
   display: flex;
   align-self: flex-end;
   padding-right: 400px;
 }
 
+.col {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  text-align: left;
+}
+
 ul {
   list-style: none;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #b3b8bd;
+  color: rgb(0, 0, 0);
+}
+
+.col {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  text-align: left;
+}
+/* styles for desktop devices */
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 16px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/* styles for tablet devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 20px;
+    width: 100%;
+    margin: auto;
+  }
+  .content-container {
+    height: auto;
+    width: auto;
+  }
+  #Discoverbanff {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .media {
+    display: block;
+    width: 100%;
+  }
+  iframe {
+    width: 375px;
+    height: 200px;
+  }
+  img {
+    width: 375px;
+    height: 200px;
+  }
+  .accordion {
+    font-size: 1.5rem;
+  }
+  .col1 {
+    text-align: right;
+    padding-left: 170px;
+  }
+}
+
+/* styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+  }
+  .content-container {
+    height: auto;
+    width: auto;
+  }
+  iframe {
+    width: 375px;
+    height: 200px;
+  }
+  img {
+    width: 375px;
+    height: 200px;
+    padding-bottom: 10px;
+  }
+  .css-button {
+    font-size: 15px;
+  }
+  .banff {
+    font-size: 1.3rem;
+  }
+  #Discoverbanff {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .media {
+    display: block;
+    width: 300px;
+  }
+  .accordion-container {
+    position: relative;
+  }
+  footer {
+    display: block;
+    font-size: 1rem;
+  }
+  .panel {
+    font-size: 1rem;
+  }
 }
